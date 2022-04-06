@@ -38,7 +38,7 @@ class FirstTaskFragment : Fragment() {
     private fun getMyData() {
         val retrofitBulder = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("https://jsonplaceholder.typicode.com/")
+            .baseUrl("https://www.simplifiedcoding.net/demos/")
             .build()
             .create(ApiInterface::class.java)
 

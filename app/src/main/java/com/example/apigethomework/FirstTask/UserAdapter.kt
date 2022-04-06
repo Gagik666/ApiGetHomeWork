@@ -4,9 +4,11 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.apigethomework.R
+import com.squareup.picasso.Picasso
 
 class UserAdapter(
     private val context: FirstTaskFragment,
@@ -14,13 +16,15 @@ class UserAdapter(
     ): RecyclerView.Adapter<UserAdapter.ViewHolder>(){
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        val tvId = itemView.findViewById<TextView>(R.id.tvId)
         val tvName = itemView.findViewById<TextView>(R.id.tvName)
-        val tvEmail = itemView.findViewById<TextView>(R.id.tvEmail)
+        val tvTeam = itemView.findViewById<TextView>(R.id.tvTeam)
+        val tvRealName = itemView.findViewById<TextView>(R.id.tvRealName)
+        val img =itemView.findViewById<ImageView>(R.id.img)
         fun bind(myDataItem: UserData) {
-            tvId.text = myDataItem.id.toString()
             tvName.text = myDataItem.name
-            tvEmail.text = myDataItem.email
+            tvTeam.text = myDataItem.team
+            tvRealName.text = myDataItem.realname
+            Picasso.get().load(myDataItem.imageurl).into(img)
         }
     }
 

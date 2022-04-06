@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">APIGetHomeWork</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title">API retrofit Get home works</string>
+    <string name="second_home_work">Second Task</string>
+    <string name="first_home_work">First Task</string>
+</resources>
